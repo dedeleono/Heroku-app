@@ -7,4 +7,5 @@ api.use(express.json({extended: true}));
 
 api.get('/', (req,res) => res.json({message: 'Hola'}));
 
+api.use(require('../routes'))
 module.exports = api;
