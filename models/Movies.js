@@ -7,6 +7,11 @@ const MoviesSchema = mongoose.Schema({
         required: true,
     },
 
+    img: {
+        type: Image,
+        required: true,
+    },
+
     publish_date: {
         type: String,
         trim: true,

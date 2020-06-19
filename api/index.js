@@ -1,4 +1,5 @@
 const express = require('express');
+const { errors } = require('celebrate')
 
 const api = express();
 
@@ -8,4 +9,7 @@ api.use(express.json({extended: true}));
 api.get('/', (req,res) => res.json({message: 'Hola'}));
 
 api.use(require('../routes'))
+
+api.use(errors());
+
 module.exports = api;
